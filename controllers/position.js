@@ -32,7 +32,7 @@ module.exports.remove = async function(req, res) {
     try {
         await Position.remove({ _id: req.params.id })
         res.status(200).json({
-            message: 'Position had been deleted'
+            message: 'Position was deleted'
         })
     } catch (e) {
         errorHandler(res, e)
